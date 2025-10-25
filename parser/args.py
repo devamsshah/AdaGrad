@@ -41,6 +41,13 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--beta2", type=float, default=0.999, help="Adam beta2")
     p.add_argument("--weight-decay", type=float, default=0.0, help="Adam weight decay")
 
+    # CNN knobs
+    p.add_argument("--cnn-width", type=int, default=64, help="Base channel width for CNN")
+    p.add_argument("--in-channels", type=int, default=3, help="Input channels fallback for image models")
+
+    # ResNet knobs
+    p.add_argument("--resnet-depth", type=int, default=18, choices=[18,34], help="ResNet depth")
+    p.add_argument("--resnet-width", type=int, default=64, help="ResNet base width")
 
     return p
 
