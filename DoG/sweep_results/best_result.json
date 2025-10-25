@@ -1,0 +1,13 @@
+{
+  "run": "sweep506",
+  "alpha": 0.01,
+  "eps": 0.001,
+  "beta": 0.57,
+  "epochs": 100,
+  "batch_size": 128,
+  "hidden": 128,
+  "dropout": 0.2,
+  "seed": 42,
+  "device": "cpu",
+  "min_test_loss": 1.78667203
+}

@@ -1,0 +1,93 @@
+# -------------------------
+# OS / Editor / IDE junk
+# -------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.orig
+*.bak
+
+.vscode/
+.idea/
+.spyproject/
+*.code-workspace
+
+# -------------------------
+# Python cache & tooling
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+.site/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.dmypy.json
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# -------------------------
+# Data & heavyweight dirs (mentioned)
+# -------------------------
+# raw/large datasets live here — keep out of git
+datasets/
+# experiment result dumps
+DoG/results_diffseed_smalleta/
+# any top-level archive workspace you noted
+zip-adagrad-convex/
+
+# -------------------------
+# Run artifacts / checkpoints / logs
+# -------------------------
+# model weights & checkpoints
+**/*.pth
+**/*.pt
+
+# training curves & run metadata
+# keep docs/*.pdf (papers) but ignore training plots everywhere else
+**/har_loss*.pdf
+**/har_loss*.json
+**/metrics.json
+**/events.out.tfevents.*
+**/*.log
+**/*.out
+
+# Optional: if you want to KEEP curated best_results, uncomment next line
+# !DoG/best_results/**
+
+# -------------------------
+# Notebooks & checkpoints
+# -------------------------
+# ignore the one you called out explicitly
+Trial.ipynb
+# (keep others by default; add the next line if you want all nbs ignored)
+# *.ipynb
+.ipynb_checkpoints/
+
+# -------------------------
+# App/config secrets (if any start appearing)
+# -------------------------
+*.env
+*.env.*
+.envrc
+
+# -------------------------
+# OS-specific junk in subfolders
+# -------------------------
+**/.DS_Store
+**/Thumbs.db
