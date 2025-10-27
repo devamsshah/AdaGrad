@@ -1,20 +1,23 @@
-from .args import parse_args
-from .utils.seed import set_seed
-from .data import get_dataset
-from .models import get_model
-from .optim import get_optimizer
-from .train import train_eval
-from .utils.plot import make_run_artifacts
+from parser.args import parse_args 
+from utils.seed import set_seed
+from datasets import get_dataset
+from models import get_model
+from optimizers import get_optimizer
+from train import train_eval
+from utils.plot import make_run_artifacts
+from utils.paths import resolve_data_dir
 
 import torch
 
 def main():
     args = parse_args()
+    args.data_dir = resolve_data_dir(args.dataset, args.data_root, args.data_dir)
     set_seed(args.seed, args.device)
 
     # Dataset & loaders
     make_loaders = get_dataset(args.dataset)
-    train_loader, test_loader, meta = make_loaders(args)
+    train_loader, test_loader, meta = get_dataset(args.dataset)(args)
+ 
 
     # Model
     build_model = get_model(args.model)

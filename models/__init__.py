@@ -1,7 +1,11 @@
 from .mlp import build_mlp
+from .cnn import build_cnn
+from .resnet import build_resnet
 
 MODEL_REGISTRY = {
     "mlp": build_mlp,
+    "cnn": build_cnn,
+    "resnet": build_resnet,
 }
 
 def get_model(name: str):
