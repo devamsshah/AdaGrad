@@ -11,7 +11,7 @@ def _slug(s: str) -> str:
 
 def make_run_artifacts(args, history, metrics):
     pdf_name = (
-        f"har_loss_{args.dataset}_{args.optimizer}"
+        f"loss_{args.dataset}_{args.optimizer}"
         f"_a={_slug_float(getattr(args,'alpha',1.0))}"
         f"_e={_slug_float(getattr(args,'eps',1e-8))}"
         f"_b={_slug_float(getattr(args,'beta',0.9))}"
@@ -19,6 +19,7 @@ def make_run_artifacts(args, history, metrics):
         f"_do={_slug_float(args.dropout)}"
         f"_bs={args.batch_size}"
         f"_seed={args.seed}"
+        f"_epochs={args.epochs}"
         + (f"_run={_slug(args.run_name)}" if args.run_name else "")
         + ".pdf"
     )

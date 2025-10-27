@@ -1,0 +1,10 @@
+usage: main.py [-h] [--dataset DATASET] [--optimizer OPTIMIZER]
+               [--model MODEL] [--epochs EPOCHS] [--batch-size BATCH_SIZE]
+               [--hidden HIDDEN] [--dropout DROPOUT] [--data-root DATA_ROOT]
+               [--data-dir DATA_DIR] [--device {cuda,cpu}] [--seed SEED]
+               [--run-name RUN_NAME] [--alpha ALPHA] [--eps EPS] [--beta BETA]
+               [--lr LR] [--beta1 BETA1] [--beta2 BETA2]
+               [--weight-decay WEIGHT_DECAY] [--cnn-width CNN_WIDTH]
+               [--in-channels IN_CHANNELS] [--resnet-depth {18,34}]
+               [--resnet-width RESNET_WIDTH]
+main.py: error: unrecognized arguments: --num-workers 4

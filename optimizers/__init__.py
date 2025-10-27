@@ -1,10 +1,12 @@
 from .dog_momentum import build_dog_momentum
+from .dog import build_dog
 from .dog_coordinate import build_dog_coordinate
 from .adam import build_adam
 
 OPTIMIZER_REGISTRY = {
+    "dog": build_dog,
     "dog_momentum": build_dog_momentum,  
-    "dog": build_dog_coordinate,        
+    "dog_coordinate": build_dog_coordinate,        
     "adam": build_adam,               
 }
 

@@ -1,13 +1,11 @@
 {
-  "run": "sweep506",
-  "alpha": 0.01,
-  "eps": 0.001,
-  "beta": 0.57,
-  "epochs": 100,
-  "batch_size": 128,
-  "hidden": 128,
-  "dropout": 0.2,
-  "seed": 42,
-  "device": "cpu",
-  "min_test_loss": 1.78667203
+  "idx": 49,
+  "run_name": "sweep_dog_cnn_mnist_a=1.00e-05_e=1.00e-07_i=49",
+  "alpha": "1e-05",
+  "eps": "1e-07",
+  "epochs": 10,
+  "batch_size": 12,
+  "seed": 55,
+  "min_loss": 10013741.5326,
+  "max_accy": 0.1399
 }

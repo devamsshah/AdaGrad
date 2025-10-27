@@ -53,6 +53,14 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--resnet-depth", type=int, default=18, choices=[18,34], help="ResNet depth")
     p.add_argument("--resnet-width", type=int, default=64, help="ResNet base width")
 
+    # DoG / LDoG knobs
+    p.add_argument("--reps-rel", type=float, default=None,
+               help="DoG r_eps relative factor; if None, falls back to --alpha or 1e-6")
+    p.add_argument("--init-eta", type=float, default=None,
+               help="Override initial eta for DoG/LDoG (optional)")
+    p.add_argument("--dog-layerwise", action="store_true",
+               help="Use LDoG (layer-wise DoG) instead of global DoG")
+
     return p
 
 def parse_args():
