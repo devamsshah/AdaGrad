@@ -29,8 +29,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     # Device/seed
     p.add_argument("--device", type=str,
-                   default=("cuda" if torch.cuda.is_available() else "cpu"),
-                   choices=["cuda", "cpu"])
+                   default=("mps" if torch.backends.mps.is_available() else "cpu"),
+                   choices=["mps", "cpu"])
     p.add_argument("--seed", type=int, default=55)
     p.add_argument("--run-name", type=str, default="")
 
@@ -60,6 +60,15 @@ def build_parser() -> argparse.ArgumentParser:
                help="Override initial eta for DoG/LDoG (optional)")
     p.add_argument("--dog-layerwise", action="store_true",
                help="Use LDoG (layer-wise DoG) instead of global DoG")
+    
+    # LM (GPT) knobs
+    p.add_argument("--block-size", type=int, default=256)
+    p.add_argument("--n-layer", type=int, default=6)
+    p.add_argument("--n-head",  type=int, default=6)
+    p.add_argument("--n-embd",  type=int, default=384)
+    p.add_argument("--bias", action="store_true", help="use bias in LayerNorm/Linear")
+    p.add_argument("--gpt2-preset", type=str, default="gpt2", choices=["gpt2","gpt2-medium","gpt2-large","gpt2-xl"])
+
 
     return p
 

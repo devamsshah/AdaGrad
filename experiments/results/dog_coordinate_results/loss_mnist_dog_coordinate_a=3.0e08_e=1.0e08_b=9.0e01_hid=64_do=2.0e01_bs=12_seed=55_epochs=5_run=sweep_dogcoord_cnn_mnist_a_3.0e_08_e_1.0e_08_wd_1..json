@@ -1,0 +1,18 @@
+{
+  "min_test_loss": 0.125233614882268,
+  "best_test_acc": 0.9606,
+  "wall_time_sec": 959.4712569713593,
+  "alpha": 3e-08,
+  "eps": 1e-08,
+  "beta": 0.9,
+  "hidden": 64,
+  "dropout": 0.2,
+  "batch_size": 12,
+  "seed": 55,
+  "device": "cpu",
+  "pdf": "loss_mnist_dog_coordinate_a=3.0e08_e=1.0e08_b=9.0e01_hid=64_do=2.0e01_bs=12_seed=55_epochs=5_run=sweep_dogcoord_cnn_mnist_a_3.0e_08_e_1.0e_08_wd_1..pdf",
+  "run_name": "sweep_dogcoord_cnn_mnist_a=3.0e-08_e=1.0e-08_wd=1.0e-03_ie=0.0001_i=54",
+  "dataset": "mnist",
+  "optimizer": "dog_coordinate",
+  "model": "cnn"
+}

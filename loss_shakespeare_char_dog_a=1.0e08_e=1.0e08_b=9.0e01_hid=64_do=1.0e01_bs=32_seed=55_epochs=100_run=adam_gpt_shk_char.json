@@ -1,0 +1,18 @@
+{
+  "min_test_loss": 1.5264784865654433,
+  "best_test_acc": 0.0,
+  "best_val_ppl": 4.601942539215088,
+  "alpha": 1e-08,
+  "eps": 1e-08,
+  "beta": 0.9,
+  "hidden": 64,
+  "dropout": 0.1,
+  "batch_size": 32,
+  "seed": 55,
+  "device": "mps",
+  "pdf": "loss_shakespeare_char_dog_a=1.0e08_e=1.0e08_b=9.0e01_hid=64_do=1.0e01_bs=32_seed=55_epochs=100_run=adam_gpt_shk_char.pdf",
+  "run_name": "adam_gpt_shk_char",
+  "dataset": "shakespeare_char",
+  "optimizer": "dog",
+  "model": "gpt"
+}

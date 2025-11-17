@@ -1,11 +1,13 @@
 {
-  "idx": 49,
-  "run_name": "sweep_dog_cnn_mnist_a=1.00e-05_e=1.00e-07_i=49",
-  "alpha": "1e-05",
-  "eps": "1e-07",
-  "epochs": 10,
+  "idx": 127,
+  "run_name": "sweep_dogcoord_cnn_mnist_a=1.0e-06_e=1.0e-08_wd=0.0e+00_ie=None_i=127",
+  "alpha": 1e-06,
+  "eps": 1e-08,
+  "weight_decay": 0.0,
+  "init_eta": "",
+  "epochs": 5,
   "batch_size": 12,
   "seed": 55,
-  "min_loss": 10013741.5326,
-  "max_accy": 0.1399
+  "min_loss": 0.01712927,
+  "max_accy": 0.9945
 }
